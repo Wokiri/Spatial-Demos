@@ -20,6 +20,10 @@
   color: $darkPrimaryColor;
 }
 
+.primaryColor{
+  color: $primaryColor;
+}
+
 .brightPrimaryColorBG{
     background-color: $brightPrimaryColor;
 }
@@ -50,7 +54,6 @@ body {
 
 
   #mainNavigation{
-
     a{
         color: $black;
     }

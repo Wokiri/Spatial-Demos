@@ -434,6 +434,10 @@
   color: #004666;
 }
 
+.primaryColor {
+  color: #00aaff;
+}
+
 .brightPrimaryColorBG {
   background-color: #e6f7ff;
 }
