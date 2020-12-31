@@ -1,0 +1,35 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+
+<div id="homeWrapper" class="container-fluid primFont">
+
+    <div id="servicesDiv" class="container p-md-4 p-sm-2 text-center">
+        {% for service in services %}
+        <div class="serviceSections m-0 p-5">
+            <div class="">
+                <div class="">
+                    <h1 class="">{{ service.title }}</h1>
+                </div>
+
+                <div class="largerFontSize">
+                    {% autoescape off %}
+                    {{ service.details }}
+                    {% endautoescape %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <div id="formDiv" class="container-fluid p-md-5 p-sm-2">
+        {% include 'pages/enquiryForm.html' %}
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

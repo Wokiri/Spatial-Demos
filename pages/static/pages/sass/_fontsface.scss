@@ -1,0 +1,468 @@
+@font-face {
+  font-family: "BarlowSemiCondensed-Black";
+  src: url("../fonts/BarlowSemiCondensed-Black.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-BlackItalic";
+  src: url("../fonts/BarlowSemiCondensed-BlackItalic.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-Bold";
+  src: url("../fonts/BarlowSemiCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-BoldItalic";
+  src: url("../fonts/BarlowSemiCondensed-BoldItalic.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-ExtraBold";
+  src: url("../fonts/BarlowSemiCondensed-ExtraBold.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-ExtraBoldItalic";
+  src: url("../fonts/BarlowSemiCondensed-ExtraBoldItalic.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-ExtraLight";
+  src: url("../fonts/BarlowSemiCondensed-ExtraLight.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-ExtraLightItalic";
+  src: url("../fonts/BarlowSemiCondensed-ExtraLightItalic.woff2")
+      format("woff2"),
+    url("../fonts/BarlowSemiCondensed-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-Italic";
+  src: url("../fonts/BarlowSemiCondensed-Italic.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-Light";
+  src: url("../fonts/BarlowSemiCondensed-Light.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-LightItalic";
+  src: url("../fonts/BarlowSemiCondensed-LightItalic.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-Medium";
+  src: url("../fonts/BarlowSemiCondensed-Medium.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-MediumItalic";
+  src: url("../fonts/BarlowSemiCondensed-MediumItalic.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-Regular";
+  src: url("../fonts/BarlowSemiCondensed-Regular.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-SemiBold";
+  src: url("../fonts/BarlowSemiCondensed-SemiBold.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-SemiBoldItalic";
+  src: url("../fonts/BarlowSemiCondensed-SemiBoldItalic.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-Thin";
+  src: url("../fonts/BarlowSemiCondensed-Thin.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ComicNeue-Bold";
+  src: url("../fonts/ComicNeue-Bold.woff2") format("woff2"),
+    url("../fonts/ComicNeue-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed-ThinItalic";
+  src: url("../fonts/BarlowSemiCondensed-ThinItalic.woff2") format("woff2"),
+    url("../fonts/BarlowSemiCondensed-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ComicNeue-BoldItalic";
+  src: url("../fonts/ComicNeue-BoldItalic.woff2") format("woff2"),
+    url("../fonts/ComicNeue-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ComicNeue-Italic";
+  src: url("../fonts/ComicNeue-Italic.woff2") format("woff2"),
+    url("../fonts/ComicNeue-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ComicNeue-Light";
+  src: url("../fonts/ComicNeue-Light.woff2") format("woff2"),
+    url("../fonts/ComicNeue-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ComicNeue-LightItalic";
+  src: url("../fonts/ComicNeue-LightItalic.woff2") format("woff2"),
+    url("../fonts/ComicNeue-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ComicNeue-Regular";
+  src: url("../fonts/ComicNeue-Regular.woff2") format("woff2"),
+    url("../fonts/ComicNeue-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSansCondensed-Black";
+  src: url("../fonts/FiraSansCondensed-Black.woff2") format("woff2"),
+    url("../fonts/FiraSansCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSansCondensed-Bold";
+  src: url("../fonts/FiraSansCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/FiraSansCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSansCondensed-BlackItalic";
+  src: url("../fonts/FiraSansCondensed-BlackItalic.woff2") format("woff2"),
+    url("../fonts/FiraSansCondensed-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSansCondensed-BoldItalic";
+  src: url("../fonts/FiraSansCondensed-BoldItalic.woff2") format("woff2"),
+    url("../fonts/FiraSansCondensed-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSansCondensed-ExtraBoldItalic";
+  src: url("../fonts/FiraSansCondensed-ExtraBoldItalic.woff2") format("woff2"),
+    url("../fonts/FiraSansCondensed-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSansCondensed-ExtraBold";
+  src: url("../fonts/FiraSansCondensed-ExtraBold.woff2") format("woff2"),
+    url("../fonts/FiraSansCondensed-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IndieFlower";
+  src: url("../fonts/IndieFlower.woff2") format("woff2"),
+    url("../fonts/IndieFlower.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSansCondensed-Thin";
+  src: url("../fonts/FiraSansCondensed-Thin.woff2") format("woff2"),
+    url("../fonts/FiraSansCondensed-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSansCondensed-ThinItalic";
+  src: url("../fonts/FiraSansCondensed-ThinItalic.woff2") format("woff2"),
+    url("../fonts/FiraSansCondensed-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoSlab-Regular";
+  src: url("../fonts/RobotoSlab-Regular.woff2") format("woff2"),
+    url("../fonts/RobotoSlab-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sniglet-ExtraBold";
+  src: url("../fonts/Sniglet-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Sniglet-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Signika-Light";
+  src: url("../fonts/Signika-Light.woff2") format("woff2"),
+    url("../fonts/Signika-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sniglet-Regular";
+  src: url("../fonts/Sniglet-Regular.woff2") format("woff2"),
+    url("../fonts/Sniglet-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERCondensed-Bold";
+  src: url("../fonts/SONGERCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/SONGERCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERCondensed-ExtraBold";
+  src: url("../fonts/SONGERCondensed-ExtraBold.woff2") format("woff2"),
+    url("../fonts/SONGERCondensed-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERCondensed-Heavy";
+  src: url("../fonts/SONGERCondensed-Heavy.woff2") format("woff2"),
+    url("../fonts/SONGERCondensed-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERCondensed-Medium";
+  src: url("../fonts/SONGERCondensed-Medium.woff2") format("woff2"),
+    url("../fonts/SONGERCondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERCondensed";
+  src: url("../fonts/SONGERCondensed.woff2") format("woff2"),
+    url("../fonts/SONGERCondensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERGrotesque-Bold";
+  src: url("../fonts/SONGERGrotesque-Bold.woff2") format("woff2"),
+    url("../fonts/SONGERGrotesque-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERGrotesque-ExtraBold";
+  src: url("../fonts/SONGERGrotesque-ExtraBold.woff2") format("woff2"),
+    url("../fonts/SONGERGrotesque-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERGrotesque-Heavy";
+  src: url("../fonts/SONGERGrotesque-Heavy.woff2") format("woff2"),
+    url("../fonts/SONGERGrotesque-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERGrotesque-Medium";
+  src: url("../fonts/SONGERGrotesque-Medium.woff2") format("woff2"),
+    url("../fonts/SONGERGrotesque-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERGrotesque";
+  src: url("../fonts/SONGERGrotesque.woff2") format("woff2"),
+    url("../fonts/SONGERGrotesque.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERSemiExpanded-Bold";
+  src: url("../fonts/SONGERSemiExpanded-Bold.woff2") format("woff2"),
+    url("../fonts/SONGERSemiExpanded-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERSemiExpanded-ExtraBold";
+  src: url("../fonts/SONGERSemiExpanded-ExtraBold.woff2") format("woff2"),
+    url("../fonts/SONGERSemiExpanded-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERSemiExpanded-Heavy";
+  src: url("../fonts/SONGERSemiExpanded-Heavy.woff2") format("woff2"),
+    url("../fonts/SONGERSemiExpanded-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERSemiExpanded-Medium";
+  src: url("../fonts/SONGERSemiExpanded-Medium.woff2") format("woff2"),
+    url("../fonts/SONGERSemiExpanded-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SONGERSemiExpanded";
+  src: url("../fonts/SONGERSemiExpanded.woff2") format("woff2"),
+    url("../fonts/SONGERSemiExpanded.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
