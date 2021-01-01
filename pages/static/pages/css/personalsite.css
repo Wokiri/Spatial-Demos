@@ -472,9 +472,24 @@ body #mainNavigation a {
   color: black;
 }
 
-body #formDiv {
-  background: #004666;
-  color: #e6f7ff;
+body #form_inspirationDiv {
+  background-image: url("../pics/site_BG.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+}
+
+body #form_inspirationDiv #formDiv {
+  background-color: white;
+  font-size: xx-large;
+}
+
+body #form_inspirationDiv #inspirationDiv {
+  font-family: "ComicNeue-Regular";
+  font-size: x-large;
+  color: white;
 }
 
 body .fromLeft {

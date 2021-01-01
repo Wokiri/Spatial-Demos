@@ -7,12 +7,12 @@ class ReadyServiceManager(models.Manager):
     def get_queryset(self):
         return super(ReadyServiceManager, self).get_queryset().filter(status='ready')
 
-
-class Service(models.Model):
-    STATUS_CHOICES = (
+STATUS_CHOICES = (
         ('wait', 'Wait'),
         ('ready', 'Ready'),
     )
+
+class Service(models.Model):
     title = models.CharField(max_length=250)
     details = models.TextField()
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='wait')
@@ -26,6 +26,7 @@ class Service(models.Model):
 
     objects = models.Manager() # The default manager.
     ready = ReadyServiceManager() # Custom manager.
+
 
 
 # class Blogs:

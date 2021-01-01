@@ -18,7 +18,8 @@ class InquiryForm(forms.Form):
                 'placeholder': 'Your Email addres',
             }
         ))
-    client_message = forms.CharField(initial='Hi Joe, I would like ',
+    client_message = forms.CharField(
+        initial='Hi Joe, there is a project I would like to discuss with you. \n',
         widget=forms.Textarea(
             attrs={
                 'class': 'form-control',
