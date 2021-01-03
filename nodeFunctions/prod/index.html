@@ -1,1 +1,287 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Joe Dev: Home</title><style>.serviceSections{background-color:#f0f8ff;margin:5px}.fromLeft{opacity:0;transform:translate(-12px,0);transition:opacity 750ms ease-in-out,transform .5s ease-out}.fromRight{opacity:0;transform:translate(12px,0);transition:opacity 750ms ease-in-out,transform .5s ease-out}.normal{opacity:1;transform:translate(0,0);transition:opacity 750ms ease-in-out,transform .5s ease-out}</style><link href="bootstrapStyling.css" rel="stylesheet"></head><body><div id="mainNavigation" class="primFont"><nav class="navbar navbar-expand-lg navbar-light"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link" href="">Joe</a></li><li class="nav-item"><a class="nav-link" href="">Projects</a></li><li class="nav-item"><a class="nav-link" href="">Articles</a></li></ul></div></nav></div><div id="homeWrapper" class="container-fluid primFont"><div id="servicesDiv" class="container p-md-4 p-sm-2 text-center"><div class="serviceSections m-0 p-5"><div><div><h1>Do you need a website?</h1></div><div class="largerFontSize"><p>as an organization or an individual</p><p>for marketing products</p><p>to facilitate &amp; improve online sales</p><p>or would you have a professional portfolio</p><p>a personal digital portfolio</p><p>a blogging website here</p><p>an online marketing platform there</p></div></div></div><div class="serviceSections m-0 p-5 normal"><div><div><h1>Spatial enabled website:</h1></div><div class="largerFontSize"><p>where users can interact with maps</p><p>a website offering Location Based Services</p><p>or visualize spatial data</p><p>with the possibility of editing vector data</p><p>or with geometric analysis functionalities, e.g. Area, Distance...</p></div></div></div><div class="serviceSections m-0 p-5 normal"><div><div><h1>Dynamic Websites:</h1></div><div class="largerFontSize"><p>with the ability to implement users' needs</p><p>registration of accounts</p><p>with a friendly interactive interface</p><p>and guaranteeing nice experiences</p></div></div></div><div class="serviceSections m-0 p-5"><div><div><h1>Secure website:</h1></div><div class="largerFontSize"><p>designed with a robust authentication system</p><p>secured site contents</p><p>and high privacy of users</p></div></div></div><div class="serviceSections m-0 p-5"><div><div><h1>Database driven website:</h1></div><div class="largerFontSize"><p>one with data storage and management ability</p><p>enhancing capabilities of data processing</p><p>and finally achieving organized display of information</p></div></div></div><div class="serviceSections m-0 p-5"><div><div><h1>Animations for websites:</h1></div><div class="largerFontSize"><p>lottie animations</p><p>styled web elements</p><p>animated svgs</p></div></div></div><div class="serviceSections m-0 p-5"><div><div><h1>Would you desire to harness any of the afore mentioned functions?</h1></div><div class="largerFontSize"><p>REACH OUT for very professional work results</p><p>and for a most friendly interaction</p><p>I sure give delicate care to my clients.</p><p>Submit a filled form below to find out how I can assist you</p><p class="text-info">I will be sure to respond within 24 hours.</p></div></div></div></div><div class="p-md-5 p-sm-2 col-12"><form action="/action_page.php"><div class="form-group"><label for="email">Email address:</label> <input type="email" class="form-control" placeholder="Enter email" id="email"></div><div class="form-group"><label for="pwd">Password:</label> <input type="password" class="form-control" placeholder="Enter password" id="pwd"></div><div class="form-group form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox"> Remember me</label></div><button type="submit" class="btn btn-primary">Submit</button></form></div></div><footer><div class="p-5">FOOTER</div></footer><script src="jsFiles/bootstrapStyling.js"></script><script src="jsFiles/outlookStyling.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Joe Dev: Home</title>
+        <style>
+            .fromLeft {
+                opacity: 0;
+                transform: translate(-12px, 0);
+                transition: opacity 750ms ease-in-out, transform .5s ease-out
+            }
+
+            .fromRight {
+                opacity: 0;
+                transform: translate(12px, 0);
+                transition: opacity 750ms ease-in-out, transform .5s ease-out
+            }
+
+            .normal {
+                opacity: 1;
+                transform: translate(0, 0);
+                transition: opacity 750ms ease-in-out, transform .5s ease-out
+            }
+        </style>
+        <link href="bootstrapStyling.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div id="mainNavigation" class="primFont">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <span class="navbar-brand semiBoldFont">Joe4Dev</span>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarNav" style="">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Joe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Articles</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div id="homeWrapper" class="container-fluid primFont">
+
+            <div id="servicesDiv" class="container p-md-4 p-sm-2 d-flex flex-column justify-content-center text-center">
+
+                <div class="serviceSections m-0 p-5 fromLeft">
+                    <div class="">
+                        <div class="">
+                            <h1 class="">Do you need a Website?</h1>
+                        </div>
+
+                        <div class="largerFontSize">
+
+                            <p>as an organization or an individual</p>
+                            <p>for marketing products</p>
+                            <p>to facilitate &amp; improve online sales</p>
+                            <p>or would you have a professional portfolio</p>
+                            <p>a personal digital portfolio</p>
+                            <p>a blogging website here</p>
+                            <p>an online marketing platform there</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="serviceSections m-0 p-5 fromRight">
+                    <div class="">
+                        <div class="">
+                            <h1 class="">Spatially-enabled Website:</h1>
+                        </div>
+
+                        <div class="largerFontSize">
+
+                            <p>where users interact with maps</p>
+                            <p>for Location Based web Services</p>
+                            <p>or visualize spatial data</p>
+                            <p>with the possibility of editing vector data</p>
+                            <p>or with geometric analysis functionalities, e.g. Distances, Intersections...</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="serviceSections m-0 p-5 fromLeft">
+                    <div class="">
+                        <div class="">
+                            <h1 class="">Dynamic Website:</h1>
+                        </div>
+
+                        <div class="largerFontSize">
+
+                            <p>with the ability to implement users' needs</p>
+                            <p>registration of accounts</p>
+                            <p>with a friendly interactive interface</p>
+                            <p>and guaranteeing nice experiences</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="serviceSections m-0 p-5 fromRight normal">
+                    <div class="">
+                        <div class="">
+                            <h1 class="">Secure Website:</h1>
+                        </div>
+
+                        <div class="largerFontSize">
+
+                            <p>designed with a robust authentication system</p>
+                            <p>secured site contents</p>
+                            <p>and high privacy of users</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="serviceSections m-0 p-5 fromLeft normal">
+                    <div class="">
+                        <div class="">
+                            <h1 class="">Database-driven Website:</h1>
+                        </div>
+
+                        <div class="largerFontSize">
+
+                            <p>one with data storage and management ability</p>
+                            <p>enhancing capabilities of data processing</p>
+                            <p>and finally achieving organized display of information</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="serviceSections m-0 p-5 fromRight">
+                    <div class="">
+                        <div class="">
+                            <h1 class="">Animations for Websites:</h1>
+                        </div>
+
+                        <div class="largerFontSize">
+
+                            <p>lottie animations</p>
+                            <p>styled web elements</p>
+                            <p>animated svgs</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="serviceSections m-0 p-5 fromLeft">
+                    <div class="">
+                        <div class="">
+                            <h1 class="">Would you desire to harness any of the afore mentioned functions?</h1>
+                        </div>
+
+                        <div class="largerFontSize">
+
+                            <p>REACH OUT for very professional work results</p>
+                            <p>and for a most friendly interaction</p>
+                            <p>I give delicate, dedicated care to my clients.</p>
+                            <p>Submit a filled form below to find out how I can assist you</p>
+                            <p class="darkPrimaryColor semiBoldFont">I will sure respond within 24 hours.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="form_inspirationDiv" class="container-fluid">
+                <div id="formDiv" class="container p-md-5 p-sm-2 rounded-bottom">
+                    <form action=".">
+                        <p><label for="client_name">Client name:</label> <input type="text" name="client_name" class="form-control" id="client_name" placeholder="Your name" required=""></p>
+                        <p><label for="client_email">Client email:</label> <input type="text" name="client_email" class="form-control" id="client_email" placeholder="Your Email addres" required=""></p>
+                        <p><label for="client_message">Client message:</label> <textarea name="client_message" cols="40" rows="10" class="form-control" id="client_message" placeholder="Your inquiry" required="">Hi Joe, there is a project I would like to discuss with you.
+                            </textarea></p>
+                        <div class="d-flex justify-content-center">
+                            <input type="button" value="Inquire" class="btn btn-light pt-2 pb-2 pl-5 pr-5">
+                        </div>
+                    </form>
+                </div>
+
+                <div id="inspirationDiv" class="container mt-5 mb-5 p-5 text-justify">
+                    <p>
+                        That you may appreciate my uncoerced dedication to this profession, my love for it and the manifold joys it bring;
+                        and that you may be convinced of my prowess in handling your business, my commitment to serve you, and that
+                        I submit impressive, functional web apps-- the exact kind you needed (if not better), are the two ends I'm
+                        striving to meet in this inspirational writeup.
+                    </p>
+
+                    <p>
+                        So scroll down through to the end. I want to show you why I code, and why I'm the guy whose invaluable resources
+                        (mental and otherwise) you want to engage.
+                    </p>
+
+                    <p>
+                        In the decase that ushered in the current century, somewhere in the highlands of Kissi county, Kenya, I was born.
+                        I would grow up under the care of both parents who worked so hard to cater for many of the family's domestic needs.
+                        In that endeavor, I must say they did relatively well: in my boyhood, I watched wrestling in a colored TV, or played
+                        snake xenxia, or played super mario at home. These things brought a deep sense of satisfaction in a young boy's life.
+                    </p>
+
+                    <p>
+                        I then enjoyed the unique possibilities that technology offered. I was moved by these innovations, I admired them
+                        and the whole phylosophy behind their creation-- to make life a little easier and sweeter, reasonated largely with
+                        my idea of 'good life.' I wanted good life. I desperately craved for more beyond the little that would be traced within
+                        our humble abode.
+                    </p>
+
+                    <p>And so it was that my love for technology was cultured.</p>
+
+                    <p>
+                        Today the story remains unchanged. It interests me that mankind at a time that constitutes the present finds his life
+                        revolving around some (if not all) aspects of this great technological dynamic. The various forms in which
+                        technology has revolutionized within just over two decades is a many sided reality that speaks of nothing but
+                        exponential growth and developement of useful applications.
+                    </p>
+
+                    <p>
+                        Advancement of the web infrastructure for instance has brought significant alterations to the way the world is run.
+                        The internet has becomes man's central medium of communication.
+                        It is his conduit to social relations, his means of study, research and education, a successful
+                        tool of trade, a potential facilitator of entertainment, just to mention but a few. <br>
+                    </p>
+
+                    <p>
+
+                    </p>
+
+
+
+                    <p>
+                        It is my purpose to advance the infinite number of possibilities that the web has to offer. <br>
+                        There's not a shadow of doubt in my mind that the present era of ICT is here for yet another long time. <br>
+                        Neither do I question the idea that this ... is at an altogether high moment.
+                    </p>
+
+                    <p>
+                        These are possibilities which I think should be exploited further and improved for the better by all means.
+                    </p>
+
+                    <p>
+                        If there's one thing I'm looking forward to is making something of my life. I want to build myself in every reasonable way
+                        that there is, <span class="lead">and I know that success in this line means excellent delivery to my clients</span>.
+                    </p>
+
+                    <p class="text-center mt-4">Do you now want to discuss your project with me?</p>
+
+
+                    <div class="d-flex justify-content-center m-4">
+                        <button class="btn btn-primary pt-2 pb-2 pl-5 pr-5">Yes Joe, kindly bring the inquiry form!</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <script src="jsFiles/bootstrapStyling.js"></script>
+        <script src="jsFiles/outlookStyling.js"></script>
+
+
+
+        <footer>
+            <div class="p-5 d-flex justify-content-center">
+                <p>FOOTER</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

@@ -476,7 +476,7 @@ body #form_inspirationDiv {
   background-image: url("../pics/site_BG.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   background-clip: padding-box;
 }
@@ -487,8 +487,8 @@ body #form_inspirationDiv #formDiv {
 }
 
 body #form_inspirationDiv #inspirationDiv {
-  font-family: "ComicNeue-Regular";
-  font-size: x-large;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: large;
   color: white;
 }
 

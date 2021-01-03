@@ -63,7 +63,7 @@ body {
     background-image: url("../pics/site_BG.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-clip: padding-box;
     
@@ -75,7 +75,7 @@ body {
 
     #inspirationDiv{
       font-family: $secondaryFont;
-      font-size: x-large;
+      font-size: large;
       color: $white;
     }
 
