@@ -468,6 +468,10 @@ body {
   color: #004666;
 }
 
+body #homeWrapper {
+  min-height: 75vh;
+}
+
 body #mainNavigation a {
   color: black;
 }
@@ -476,7 +480,7 @@ body #form_inspirationDiv {
   background-image: url("../pics/site_BG.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-clip: padding-box;
 }
@@ -487,8 +491,8 @@ body #form_inspirationDiv #formDiv {
 }
 
 body #form_inspirationDiv #inspirationDiv {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: large;
+  font-family: "BarlowSemiCondensed-Thin";
+  font-size: x-large;
   color: white;
 }
 
@@ -520,4 +524,41 @@ body .normal {
   transition: opacity 750ms ease-in-out, -webkit-transform 500ms ease-out;
   transition: opacity 750ms ease-in-out, transform 500ms ease-out;
   transition: opacity 750ms ease-in-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
+}
+
+footer #footerDetails {
+  color: #00aaff;
+  text-align: center;
+}
+
+footer #footerDetails #socialMediaLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+footer #footerDetails #socialMediaLinks .line {
+  border: solid #00aaff;
+  border-width: 0 3px 0 0;
+  display: inline-block;
+  padding: 0.8em 0;
+  margin: 4px;
+}
+
+footer #footerDetails #socialMediaLinks a {
+  color: #004666;
+  font-size: larger;
+  text-decoration: none;
+  font-weight: 600;
 }

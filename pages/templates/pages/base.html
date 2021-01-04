@@ -5,17 +5,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Joe Dev: {% block title %}{{ pageName }}{% endblock %}</title>
+        <title>Joe4Dev: {% block title %}{{ pageName }}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{% static 'pages/css/bootstrapStyling.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'pages/css/personalsite.css' %}">
     </head>
 
     <body>
 
-        {% include 'pages/mainNavigation.html' %}
+        <div id="homeWrapper" class="container-fluid primFont">
+            {% include 'pages/mainNavigation.html' %}
 
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
+        </div>
+
+
 
         <script src="{% static 'pages/js/bootstrapStyling.js' %}"></script>
         <script src="{% static 'pages/js/outlookStyling.js' %}"></script>

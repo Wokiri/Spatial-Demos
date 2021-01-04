@@ -52,6 +52,10 @@ body {
   overflow-x: hidden;
   color: $darkPrimaryColor;
 
+  #homeWrapper{
+    min-height: 75vh;
+  }
+
 
   #mainNavigation{
     a{
@@ -63,7 +67,7 @@ body {
     background-image: url("../pics/site_BG.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-clip: padding-box;
     
@@ -74,9 +78,13 @@ body {
       }
 
     #inspirationDiv{
-      font-family: $secondaryFont;
-      font-size: large;
+      font-family: "BarlowSemiCondensed-Thin";
+      font-size: x-large;
       color: $white;
+    }
+
+    #formModal{
+      // font-family: "BarlowSemiCondensed-Regular";
     }
 
   }
@@ -102,4 +110,29 @@ body {
 }
 
 footer{
+  
+  #footerDetails {
+    color: $primaryColor;
+    text-align: center;
+    #socialMediaLinks {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      .line {
+          border: solid $primaryColor;
+          border-width: 0 3px 0 0;
+          display: inline-block;
+          padding: 0.8em 0;
+          margin: 4px;
+      }
+      a {
+          color: $darkPrimaryColor;
+          font-size: larger;
+            text-decoration: none;
+          font-weight: 600;
+      }
+    }
+  }
 }

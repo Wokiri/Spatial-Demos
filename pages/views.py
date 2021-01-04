@@ -16,3 +16,27 @@ def homeView(request):
     }
 
     return render(request, 'pages/home.html', context)
+
+
+# Create your views here.
+def projectsView(request):
+
+    pageName = 'Projects'
+
+    context = {
+        'pageName': pageName,
+    }
+
+    return render(request, 'pages/projects.html', context)
+
+
+# Create your views here.
+def articlesView(request):
+
+    pageName = 'Articles'
+
+    context = {
+        'pageName': pageName,
+    }
+
+    return render(request, 'pages/articles.html', context)
