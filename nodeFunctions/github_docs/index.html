@@ -23,7 +23,9 @@
                 transition: opacity 750ms ease-in-out, transform .5s ease-out
             }
         </style>
-        <link href="bootstrapStyling.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/bootstrapStyling.css">
+        <link rel="stylesheet" type="text/css" href="./css/personalsite.css">
+        <script data-dapp-detection="">!function () { let e = !1; function n() { if (!e) { const n = document.createElement("meta"); n.name = "dapp-detected", document.head.appendChild(n), e = !0 } } if (window.hasOwnProperty("ethereum")) { if (window.__disableDappDetectionInsertion = !0, void 0 === window.ethereum) return; n() } else { var t = window.ethereum; Object.defineProperty(window, "ethereum", { configurable: !0, enumerable: !1, set: function (e) { window.__disableDappDetectionInsertion || n(), t = e }, get: function () { if (!window.__disableDappDetectionInsertion) { const e = arguments.callee; e && e.caller && e.caller.toString && -1 !== e.caller.toString().indexOf("getOwnPropertyNames") || n() } return t } }) } }();</script>
     </head>
 
     <body>
@@ -38,19 +40,21 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Home</a>
+                                <a class="nav-link" href="./projects.html">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/projects/">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/articles/">Articles</a>
+                                <a class="nav-link" href="./articles.html">Articles</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
             </div>
 
+            <div class="container">
+                <h1 class="text-info font-weight-bold text-center secFont mt-5">
+                    Joe4Dev and Spatial Solutions
+                </h1>
+            </div>
 
 
             <div id="servicesDiv" class="container p-md-4 p-sm-2 d-flex flex-column justify-content-center text-center">
@@ -75,7 +79,7 @@
                     </div>
                 </div>
 
-                <div class="serviceSections m-0 p-5 fromRight normal">
+                <div class="serviceSections m-0 p-5 fromRight">
                     <div class="">
                         <div class="">
                             <h1 class="">Spatially-enabled Web Apps:</h1>
@@ -180,13 +184,18 @@
 
             <div id="form_inspirationDiv" class="container-fluid">
                 <div id="formDiv" class="container pb-4 rounded-bottom">
-                    <form action=".">
-                        <p><label for="client_name">Client name:</label> <input type="text" name="client_name" class="form-control" id="client_name" placeholder="Your name" required=""></p>
-                        <p><label for="client_email">Client email:</label> <input type="text" name="client_email" class="form-control" id="client_email" placeholder="Your Email addres" required=""></p>
-                        <p><label for="client_message">Client message:</label> <textarea name="client_message" cols="40" rows="10" class="form-control" id="client_message" placeholder="Your inquiry" required="">Hi Joe, there is a project I would like to discuss with you.
-                            </textarea></p>
+                    <form id="inquiryForm">
+                        <p><label for="client_name">Client name:</label>
+                            <input type="text" name="client_name" class="form-control" id="client_name" placeholder="Your name" required="">
+                        </p>
+                        <p><label for="client_email">Client email:</label>
+                            <input type="text" name="client_email" class="form-control" id="client_email" placeholder="Your Email addres" required="">
+                        </p>
+                        <p><label for="client_message">Client message:</label>
+                            <textarea name="client_message" cols="40" rows="10" class="form-control" id="client_message" placeholder="Your inquiry" required="">Hi Joe, there is a project I would like to discuss with you.</textarea>
+                        </p>
                         <div class="d-flex justify-content-center">
-                            <input type="button" value="Inquire" class="btn btn-light pt-2 pb-2 pl-5 pr-5">
+                            <input type="button" id="submitForm" value="Inquire" class="btn btn-light pt-2 pb-2 pl-5 pr-5">
                         </div>
                     </form>
                 </div>
@@ -195,10 +204,13 @@
                     <h4 class="text-center font-weight-bold">Inspiration</h4>
 
                     <p>
-                        That you may appreciate my uncoerced dedication to this profession, my love for it and the manifold joys it bring;
-                        <br>and that you may see my prowess, professionalism in handling your business, commitment to serve you,
-                        and that I submit impressive, functional web apps-- the exact kind you needed (if not better),
-                        are the two ends I'm striving to meet in this inspirational writeup.
+                        That you may appreciate my uncoerced dedication to this business, my love for it and the manifold joys it bring;
+                        <br>and that you may see my prowess, professionalism and commitment to serve you, are the two ends I'm striving to
+                        meet in this inspirational writeup.
+                    </p>
+
+                    <p>
+                        My mandate is to submit impressive, functional web apps-- the very kind you need if not better.
                     </p>
 
                     <p>
@@ -207,56 +219,65 @@
                     </p>
 
                     <p>
-                        I was born sometime in the decade that ushered in the current century, somewhere in the highlands of Kissi county, Kenya.
-                        I would grow up under the care of both parents who worked so hard to cater for many of the family's domestic needs.
-                        In that endeavor, I must say they did relatively well: in my boyhood, I watched wrestling in a colored TV, or played
-                        mobile games, or DVD games at home. These things brought a deep sense of satisfaction in a young boy's life.
+                        I am a beneficiary of the unique benefits that technology has and continues to offer.
+                        I've been moved by these innovations-- whether its in the internet and the web, or in the various useful applications.
+                        I admire the whole phylosophy behind their creation-- to make life a little easier and better,
+                        to enhance the possibilities of bussiness, and to facilitate anything worthwhile--
+                        reasonates largely with my idea of 'good life.' I want good life and I want one for you too.
                     </p>
 
                     <p>
-                        I then enjoyed the unique possibilities that technology offered. I was moved by these innovations, I admired them
-                        and the whole phylosophy behind their creation-- to make life a little easier and sweeter, reasonated largely with
-                        my idea of 'good life.' I wanted good life. I desperately craved for more beyond the little that would be traced within
-                        our humble abode.
+                        And so it is that my love for technology has been cultured.
+                        The conception of <span class="font-weight-bold">Joe4Dev</span> is a result of this inspiration.<br>
+                        The sole purpose, I reiterate, is to extend the promises of web apps. I bring solutions from a wide spectra of options amongst which include:
                     </p>
-
-                    <p>And so it was that my love for technology was cultured.</p>
+                    <ul class="nav font-weight-bold">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./projects.html">Map Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./projects.html">Commerse Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./projects.html">Portfolios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./articles.html">Tech Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./projects.html">GIS & LBSs</a>
+                        </li>
+                    </ul>
+                    <p></p>
 
                     <p>
-                        Today the story remains unchanged. It interests me that mankind at a time that constitutes the present finds his life
+                        It particularly interest me that mankind at a time that constitutes the present finds his life
                         revolving around some (if not all) aspects of this great technological dynamic. The various forms in which
                         technology has revolutionized within just over two decades is a many sided reality that speaks of nothing but
                         exponential growth.<br> Life has been made 'better' by the developement of uncountable useful applications.
                     </p>
 
                     <p>
-                        Advancement of the web infrastructure for instance has brought significant alterations to the way the world is run.
-                        The internet has becomes man's central medium of communication.
-                        It is his conduit to social relations, his means of study, research and education, a successful
-                        tool of trade, a potential facilitator of entertainment, just to mention but a few. <br>
-                    </p>
+                        Besides the basic building blocks of web app: HTML, CSS and JS, I intergrate many of JavaScript frameworks used to
+                        develop modern efficient apps. I particularly love Django (and GeoDjango for spatial intergtaions) for the various
+                        powerful options it has on the platform.<br>
 
-                    <p>
-
-                    </p>
-
-
-
-                    <p>
-                        It is my purpose to advance the possibilities that the web has to offer.
-                        There's not a shadow of doubt in my mind that the present era of ICT is here for yet a long time. <br>
-                        Neither do I question the idea that this ... is at an altogether high moment.
-                    </p>
-
-                    <p>
-                        These are possibilities which I think should be exploited further and improved for the better by all means.
+                    <blockquote class="blockquote">
+                        <p>
+                            The Django philosophy is to include all the required pieces to make a full web
+                            application for the internet. This “batteries-included” philosophy is what makes Django so powerful.
+                        </p>
+                        <footer class="blockquote-footer text-light">
+                            <a class="text-light" href="https://www.mattlayman.com/understand-django/">article: Understand Django</a>
+                        </footer>
+                    </blockquote>
                     </p>
 
                     <p>
                         If there's one thing I'm looking forward to is making something of my life. I want to build myself in every reasonable way
                         that there is.
                         <span class="text-info font-weight-bold">
-                            I know that success in this line means excellent delivery to my clients and thats exactly what I do.
+                            This I do by delivering excellently to my clients and thats exactly what I will do for you.
                         </span>
                     </p>
 
@@ -264,53 +285,23 @@
 
 
                     <div class="d-flex justify-content-center m-4">
-                        <button class="btn btn-info pt-2 pb-2 pl-5 pr-5" data-toggle="modal" data-target="#formModal">
-                            Yes Joe, kindly bring the inquiry form!
-                        </button>
+                        <a href="#inquiryForm" class="nav-link">
+                            <button class="btn btn-info pt-2 pb-2 pl-5 pr-5">
+                                Yes Joe, take me to the inquiry form!
+                            </button>
+                        </a>
                     </div>
 
-                    <!-- The Modal -->
-                    <div class="modal fade primFont" id="formModal">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content darkPrimaryColor">
-
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4 class="modal-title">REACH OUT</h4>
-                                    <button type="button" class="close" data-dismiss="modal">×</button>
-                                </div>
-
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <form action=".">
-                                        <p><label for="client_name">Client name:</label> <input type="text" name="client_name" class="form-control" id="client_name" placeholder="Your name" required=""></p>
-                                        <p><label for="client_email">Client email:</label> <input type="text" name="client_email" class="form-control" id="client_email" placeholder="Your Email addres" required=""></p>
-                                        <p><label for="client_message">Client message:</label> <textarea name="client_message" cols="40" rows="10" class="form-control" id="client_message" placeholder="Your inquiry" required="">Hi Joe, there is a project I would like to discuss with you.
-                                            </textarea></p>
-                                        <div class="d-flex justify-content-center">
-                                            <input type="button" value="Inquire" class="btn btn-light pt-2 pb-2 pl-5 pr-5">
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <!-- Modal footer -->
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close Form</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
 
         </div>
 
-        <script src="jsFiles/bootstrapStyling.js"></script>
-        <script src="jsFiles/outlookStyling.js"></script>
-
-
+        <script src="./jsFiles/bootstrapStyling.js"></script>
+        <script src="./jsFiles/outlookStyling.js"></script>
+        <script src="./jsFiles/smtp.js"></script>
+        <script src="./jsFiles/submitform.js"></script>
 
         <footer>
             <div class="p-5">

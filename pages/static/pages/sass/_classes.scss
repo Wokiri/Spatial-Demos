@@ -1,0 +1,37 @@
+
+
+.primFont {
+  font-family: $primaryFont;
+}
+
+.secFont{
+  font-family: "BarlowSemiCondensed-ExtraBold";
+}
+
+.boldFont {
+  font-weight: 700;
+}
+
+.semiBoldFont {
+  font-weight: 600;
+}
+
+.whiteColor{
+    color: $white;
+}
+
+.darkPrimaryColor{
+  color: $darkPrimaryColor;
+}
+
+.primaryColor{
+  color: $primaryColor;
+}
+
+.brightPrimaryColorBG{
+    background-color: $brightPrimaryColor;
+}
+
+.largerFontSize{
+    font-size: larger;
+}
