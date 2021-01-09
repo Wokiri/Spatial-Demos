@@ -25,7 +25,7 @@ if os.name == 'nt':
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'y+$ibboy!xt(e@36rxglfwy)wolz_i#4(#7_lzh+piv4#ss+u1'
+SECRET_KEY = os.environ.get('SECRET_KEY'),
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'personal_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE':'django.contrib.gis.db.backends.postgis',
-        'NAME':'personal_site_DB',
-        'USER':'postgres',
-        'PASSWORD': 'joe123456',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'ENGINE':os.environ.get('DB_ENGINE'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
 
@@ -134,3 +134,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

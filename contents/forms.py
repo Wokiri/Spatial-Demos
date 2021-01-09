@@ -6,7 +6,7 @@ class InquiryForm(forms.Form):
             attrs={
                 'class': 'form-control',
                 'id': 'client_name',
-                'placeholder': 'Your name',
+                'placeholder': 'Your first name',
             }
         )
     )
@@ -15,7 +15,7 @@ class InquiryForm(forms.Form):
             attrs={
                 'class': 'form-control',
                 'id': 'client_email',
-                'placeholder': 'Your Email addres',
+                'placeholder': 'Your Email address',
             }
         ))
     client_message = forms.CharField(
