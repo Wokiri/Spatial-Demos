@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 
     #GIS
     'django.contrib.gis',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     #personal apps
     'pages.apps.PagesConfig',
     'contents.apps.ContentsConfig',
+    'maps.apps.MapsConfig',
 ]
 
 MIDDLEWARE = [

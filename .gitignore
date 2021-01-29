@@ -1,3 +1,26 @@
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+
+# Dependency directories
+*node_modules/
+jspm_packages/
+
+
+*/prod
+
+*/src/fontsAssets/
+*/src/fonts/
+*/src/css/
+*/src/pics/
+*/src/scss/
+
+*iconsAssets
+
 # Logs
 logs
 *.log
@@ -37,9 +60,7 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directories
-node_modules/
-jspm_packages/
+
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
@@ -108,6 +129,7 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 .code-workspace
+*.code-workspace
 
 # yarn v2
 .yarn/cache
@@ -116,10 +138,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
 *.psd

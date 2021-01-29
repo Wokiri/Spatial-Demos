@@ -1,10 +1,23 @@
 from django.shortcuts import redirect, render
-from contents.models import Service
 from contents.forms import InquiryForm
 
 from django.core.mail import EmailMessage
 from django.contrib import messages
 from django.conf import settings
+
+from django.contrib.gis.gdal import OGRGeometry
+from django.contrib.gis.geos import GEOSGeometry
+
+from django.core.serializers import serialize
+
+from contents.models import (
+    Service,
+    Project
+    )
+from maps.models import CountriesZones
+
+
+
 
 # Create your views here.
 def homeView(request):
@@ -59,6 +72,7 @@ def projectsView(request):
 
     context = {
         'pageName': pageName,
+        'projects': Project.objects.all()
     }
 
     return render(request, 'pages/projects.html', context)
@@ -74,3 +88,17 @@ def articlesView(request):
     }
 
     return render(request, 'pages/articles.html', context)
+
+
+def worldtimeView(request):
+
+    pageName = 'World Time'
+
+    countries_json = serialize('geojson', CountriesZones.objects.all())
+
+    context = {
+        'pageName': pageName,
+        'countries_json': countries_json
+    }
+
+    return render(request, 'pages/maps/worldTime.html', context)

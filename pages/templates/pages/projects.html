@@ -2,9 +2,19 @@
 
 {% block content %}
 
-<div class="container text-center">
-    <h1 class="display-3">Projects Coming Soon</h1>
-    <a href="{% url 'pages:home_page' %}" class="btn btn-outline-dark" role="button">Back Home</a>
+<div class="container mt-4 mb-4">
+    <h2 class="text-center">List of {{ projects|length }} project{{ projects|pluralize }} done:</h2>
+    <ul class="nav nav-pills list-group mb-4 largerFontSize">
+        {% for project in projects %}
+        <li class="nav-item list-group-item">
+            <h4>{{ project.title|upper }}</h4>
+            <p>{{ project.details }}</p>
+            <a href="{% url project.project_url %}" class="list-group-item list-group-item-action">
+                {{ forloop.counter }}. {{ project.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 
 {% endblock %}

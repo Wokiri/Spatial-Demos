@@ -22,14 +22,14 @@ class Service(models.Model):
         ordering = ('order',)
 
     def __str__(self):
-        return f'{self.order}: {self.title}'
+        return self.title
 
     objects = models.Manager() # The default manager.
     ready = ReadyServiceManager() # Custom manager.
 
 
 
-class Articles(models.Model):
+class Article(models.Model):
     title = models.CharField(max_length=250)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -41,3 +41,14 @@ class Articles(models.Model):
         return self.title
 
     ready = ReadyServiceManager() # Custom manager.
+
+
+class Project(models.Model):
+    title = title = models.CharField(max_length=25)
+    details = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    # thumbnail = models.ImageField()
+    project_url = models.TextField()
+
+    def __str__(self):
+        return self.title

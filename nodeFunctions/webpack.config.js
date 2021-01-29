@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require('webpack')
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -8,18 +9,36 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     bootstrapStyling: "./src/js/bootstrapStyling.js",
-    outlookStyling: "./src/js/outlookStyling.js",
+    appStyling: "./src/js/appStyling.js",
+    personalsite: "./src/js/personalsite.js",
+    worldtimeMap: "./src/js/worldtimeMap.js",
   },
   output: {
     publicPath: "",
     path: path.resolve(__dirname, "prod"),
+    // filename: "jsFiles/[name].[contenthash].js",
     filename: "jsFiles/[name].js",
+  },
+  devServer: {
+    port: 2040,
+    clientLogLevel: 'none',
+    stats: 'errors-only'
   },
   optimization: {
     minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
   },
   module: {
     rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
       {
         //HTML loader Exports HTML as string, hence it can capture file extention names
         test: /\.html$/,
@@ -34,7 +53,7 @@ module.exports = {
             options: {
               // name: "[name].[hash].[ext]",
               name: "[name].[ext]",
-              outputPath: "imgsFolder/",
+              outputPath: "pics/",
             },
           },
         ],
@@ -48,8 +67,8 @@ module.exports = {
             // Using file-loader
             loader: "file-loader",
             options: {
-              name: "[name].[hash].[ext]",
-              outputPath: "fontsFolder/",
+              name: "[name].[fullhash].[ext]",
+              outputPath: "fonts/",
             },
           },
         ],
@@ -76,16 +95,25 @@ module.exports = {
   },
 
   plugins: [
+	new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.NODE_DEBUG': JSON.stringify(process.env.NODE_DEBUG),
+      'process.type': JSON.stringify(process.type),
+      'process.version': JSON.stringify(process.version)
+    }),
     new CleanWebpackPlugin(),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    // new MiniCssExtractPlugin({ filename: "[name].[fullhash].css" }),
     new MiniCssExtractPlugin({ filename: "[name].css" }),
+
     new HtmlWebpackPlugin({
-      template: "./src/template.html",
+      template: "./src/index.html",
       minify: {
         collapseWhitespace: true,
         removeComments: true, // false for Vue SSR to find app placeholder
         removeEmptyAttributes: true,
       },
     }),
+    
   ],
 };

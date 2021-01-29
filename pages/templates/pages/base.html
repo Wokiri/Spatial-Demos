@@ -5,22 +5,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}{{ pageName }} | {% endblock %}Joe4Dev</title>
+        <title>{% block title %}{{ pageName }} | {% endblock %}LaerdzDev</title>
         <link rel="stylesheet" type="text/css" href="{% static 'pages/css/bootstrapStyling.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'pages/css/mapStyling.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'pages/css/personalsite.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'pages/css/worldtimeMap.css' %}">
     </head>
 
     <body>
 
-        <div id="homeWrapper" class="container-fluid primFont">
-            {% include 'pages/mainNavigation.html' %}
+        <div class="h-75 primFont">
+            <div class="container">
+                {% include 'pages/mainNavigation.html' %}
+            </div>
             {% block content %}{% endblock %}
         </div>
 
 
 
         <script src="{% static 'pages/js/bootstrapStyling.js' %}"></script>
-        <script src="{% static 'pages/js/outlookStyling.js' %}"></script>
+        <script src="{% static 'pages/js/personalsite.js' %}"></script>
+        <script src="{% static 'pages/js/worldtimeMap.js' %}"></script>
 
     </body>
 

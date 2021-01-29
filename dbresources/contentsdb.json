@@ -1,0 +1,92 @@
+[
+{
+ "model": "contents.service",
+ "pk": 1,
+ "fields": {
+  "title": "Do you need a Website?",
+  "details": "<p>as an organization or as an individual</p>\r\n<p>to manage your organization's workflow</p>\r\n<p>for marketing, facilitating & improving online sales</p>\r\n<p>or would you have a professional portfolio</p>\r\n<p>a personal digital portfolio</p>\r\n<p>a blogging website here</p>\r\n<p>an online marketing platform there</p>",
+  "status": "ready",
+  "order": 1
+ }
+},
+{
+ "model": "contents.service",
+ "pk": 2,
+ "fields": {
+  "title": "Dynamic Website:",
+  "details": "<p>with the ability to implement users' needs</p>\r\n<p>to execute users' request</p>\r\n<p>or registration of accounts</p>\r\n<p>with a friendly interactive interface</p>\r\n<p>and guaranteeing nice experiences</p>",
+  "status": "ready",
+  "order": 3
+ }
+},
+{
+ "model": "contents.service",
+ "pk": 3,
+ "fields": {
+  "title": "Secure Website:",
+  "details": "<p>designed with a robust authentication system</p>\r\n<p>with sessions components</p>\r\n<p>secured site contents</p>\r\n<p>and high privacy of users</p>",
+  "status": "ready",
+  "order": 4
+ }
+},
+{
+ "model": "contents.service",
+ "pk": 4,
+ "fields": {
+  "title": "Spatially Enabled Web Apps:",
+  "details": "<p>where users interact with maps</p>\r\n<p>for Location Based web Services</p>\r\n<p>or visualize spatial data</p>\r\n<p>with the possibility of editing vector data</p>\r\n<p>or with geometric analysis functionalities, e.g. Distances, Intersections...</p>",
+  "status": "ready",
+  "order": 2
+ }
+},
+{
+ "model": "contents.service",
+ "pk": 5,
+ "fields": {
+  "title": "Database Driven Website:",
+  "details": "<p>with both storage and analysis tools</p>\r\n<p>enhancing capabilities of data processing</p>\r\n<p>a resource for analyzing patterns in data</p>\r\n<p>and finally achieving organized display of information</p>",
+  "status": "ready",
+  "order": 5
+ }
+},
+{
+ "model": "contents.service",
+ "pk": 6,
+ "fields": {
+  "title": "Would you desire to harness any of the mentioned functions?",
+  "details": "<p>REACH OUT for very professional work results</p>\r\n<p>and for a most friendly interaction</p>\r\n<p>we give delicate, dedicated care to clients.</p>\r\n<p>Submit a filled form below to find out how we can be of assistance</p>\r\n<p class='darkPrimaryColor semiBoldFont'>and within 24hrs we'll have responded.</p>",
+  "status": "ready",
+  "order": 7
+ }
+},
+{
+ "model": "contents.service",
+ "pk": 7,
+ "fields": {
+  "title": "Animations for Websites:",
+  "details": "<p>lottie animations</p>\r\n<p>styled web elements</p>\r\n<p>animated svgs</p>",
+  "status": "ready",
+  "order": 6
+ }
+},
+{
+ "model": "contents.project",
+ "pk": 1,
+ "fields": {
+  "title": "World Clock",
+  "details": "This is an interactive map that gives the real time information of every country.",
+  "created": "2021-01-29T13:18:57.249Z",
+  "project_url": "pages:worldtime_page"
+ }
+},
+{
+ "model": "contents.project",
+ "pk": 2,
+ "fields": {
+  "title": "Coordinates Conversion",
+  "details": "This project accepts user input coordinates in one system and converts them to coordinates of a different system.",
+  "created": "2021-01-29T13:44:05.076Z",
+  "project_url": "pages:articles_page"
+ }
+}
+]

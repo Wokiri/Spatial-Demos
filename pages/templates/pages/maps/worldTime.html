@@ -1,0 +1,17 @@
+{% extends 'pages/base.html' %} {% block content %}
+
+<div class="container">
+  <h1 class="text-info font-weight-bold text-center tertiaryFont mt-5">
+    LaerdzDev WorldClock
+  </h1>
+</div>
+
+<div class="container mb-4">
+  <div class="w-100 mx-auto" id="worldtime_map"></div>
+</div>
+
+<script>
+  const WorldCountriesJson = "{{ countries_json|escapejs }}";
+</script>
+
+{% endblock %}
