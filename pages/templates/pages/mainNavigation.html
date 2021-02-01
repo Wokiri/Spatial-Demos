@@ -1,4 +1,4 @@
-<div id="mainNavigation" class="primFont">
+<div id="mainNavigation" class="primFont largerFontSize">
   <nav class="navbar navbar-expand-lg navbar-light">
     <span class="navbar-brand semiBoldFont">LaerdzDev</span>
     <button
@@ -17,13 +17,11 @@
         {% if pageName == 'Home' %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'pages:projects_page' %}"
-            >Projects</a
-          >
+            >Projects</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'pages:articles_page' %}"
-            >Articles</a
-          >
+            >Articles</a>
         </li>
 
         {% elif pageName == 'Projects' %}
@@ -32,8 +30,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'pages:articles_page' %}"
-            >Articles</a
-          >
+            >Articles</a>
         </li>
 
         {% elif pageName == 'Articles' %}
@@ -42,8 +39,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'pages:projects_page' %}"
-            >Projects</a
-          >
+            >Projects</a>
         </li>
 
         {% else %}
@@ -52,13 +48,11 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'pages:projects_page' %}"
-            >Projects</a
-          >
+            >Projects</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'pages:articles_page' %}"
-            >Articles</a
-          >
+            >Articles</a>
         </li>
 
         {% endif %}

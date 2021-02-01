@@ -216,10 +216,6 @@ body {
   color: #004666;
 }
 
-body #homeWrapper {
-  min-height: 75vh;
-}
-
 body #mainNavigation a {
   color: black;
 }

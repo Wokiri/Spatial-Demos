@@ -7,10 +7,15 @@ import { Map, View } from "ol";
 import Select from "ol/interaction/Select";
 import sync from "ol-hashed";
 
+import { mapTime } from './parameters'
+
+// Real map time
+const mapRealTime = zone => `${mapTime(zone).D} ${mapTime(zone).H}:${mapTime(zone).M}  ${mapTime(zone).S}`
+
 const worldtime_map = document.querySelector("#worldtime_map");
 
 // only dev mode
-// const WorldCountriesJson = require('./KenyaRegions.json')
+const WorldCountriesJson = require('./KenyaRegions.json')
 
 const WorldCountriesVector = new VectorSource({
   features: new GeoJSON().readFeatures(WorldCountriesJson, {
@@ -66,7 +71,19 @@ const worldclockMap = new Map({
 // selection options
 //By default, this is module:ol/events/condition~singleClick. Other defaults are exactly what I need
 const singleMapClick = new Select({});
-
 worldclockMap.addInteraction(singleMapClick);
 
 sync(worldclockMap);
+
+// console.log(WorldCountriesVector)
+
+// const countrieTimeZone = feature => Number(feature.get("zone"))
+
+// // Real time and display
+// const mapRealTimeDiv = document.getElementById('mapRealTimeDiv')
+
+// if (mapRealTimeDiv) {
+//   setInterval(() => {
+//     mapRealTimeDiv.innerHTML = mapRealTime(WorldCountriesVector.getProperties())
+//   }, 1000);
+// }
