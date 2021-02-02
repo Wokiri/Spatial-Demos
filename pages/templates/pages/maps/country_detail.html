@@ -1,0 +1,30 @@
+{% extends 'pages/base.html' %} {% block content %} {% if country %}
+<div class="container">
+  <h1 class="text-info font-weight-bold text-center tertiaryFont mt-5">
+    More information about {{ country.name }}
+  </h1>
+</div>
+{% endif %}
+
+<div class="container mb-2 largerFontSize">
+
+  <div class="table-responsive-sm">
+    <table class="table defaultFontSize mx-auto table-striped">
+      <tr>
+        <th>Name:</th>
+        <td>{{ country.name }}</td>
+      </tr>
+      <tr>
+        <th>Area:</th>
+        <td>{{ country_area }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>Cities in {{ country.name }}</h2>
+  {% for city in cities_in_country|dictsort:"accentcity" %}
+    {{ city.accentcity }},
+  {% endfor %}
+</div>
+
+{% endblock %}

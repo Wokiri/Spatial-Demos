@@ -1,8 +1,8 @@
 const roundoff = (num, dp) => Number(Math.round(num + 'e' + dp) + 'e-' + dp)
+const pad = num => num < 10 ? "0" + num : num
+const posneg = num => num < 0 ? num : "+" + num
 
 const mapTime = timezoneOffset => {
-
-    const pad = num => num < 10 ? "0" + num : num
 
     const days_of_the_week = ['Sunday', 'Monday', 'Tuesday', 'Wednessday', 'Thursday', 'Friday', 'Saturday']
 
@@ -62,5 +62,7 @@ const mapTime = timezoneOffset => {
 
 export {
     roundoff,
+    pad,
+    posneg,
     mapTime
 }
