@@ -7,10 +7,11 @@ class ReadyServiceManager(models.Manager):
     def get_queryset(self):
         return super(ReadyServiceManager, self).get_queryset().filter(status='ready')
 
-STATUS_CHOICES = (
-        ('wait', 'Wait'),
-        ('ready', 'Ready'),
-    )
+STATUS_CHOICES = [
+    ('wait', 'Wait'),
+    ('ready', 'Ready'),
+]
+        
 
 class Service(models.Model):
     title = models.CharField(max_length=250)
@@ -52,3 +53,5 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+

@@ -1,0 +1,19 @@
+<head>
+{{ map_form.media }}
+{% block title %}
+    <title>GIS TestsPage</title>
+{% endblock %}
+</head>
+
+
+
+<div class="container">
+    <h1 class="text-info font-weight-bold text-center tertiaryFont mt-4 mb-4">
+        Displaying a Map Form
+    </h1>
+
+    <div class="container">
+        <span class="text-danger">{{ map_form.errors }}</span>
+        {{ map_form.as_p }}
+    </div>
+</div>

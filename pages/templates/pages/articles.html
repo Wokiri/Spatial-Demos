@@ -1,17 +1,24 @@
 {% extends 'pages/base.html' %}
+{% load humanize %} 
 
 {% block content %}
 
-<div class="container text-center">
-    <h1 class="display-3">Articles Coming Soon</h1>
-    <a href="{% url 'pages:home_page' %}" class="btn btn-outline-dark" role="button">Back Home</a>
-</div>
-
 <div id="articlessDiv" class="container p-md-4 p-sm-2 d-flex flex-column justify-content-center text-center">
+
+    {% if articles %}
+        <h2 class="text-center">List of {{ articles|length|apnumber }} project{{ articles|pluralize }} done:</h2>
+    {% endif %}
+
     {% for article in articles %}
     
-    
+    {% empty %}
+        <p class="display-4">Articles Coming Soon</p>
     {% endfor %}
+</div>
+
+<div class="container text-center mt-5 mb-5">
+    <a href="{% url 'pages:home_page' %}" class="btn btn-outline-dark" role="button">Home</a>
+    <a href="{% url 'pages:projects_page' %}" class="btn btn-outline-dark" role="button">Projects</a>
 </div>
 
 

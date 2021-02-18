@@ -6,7 +6,7 @@
 </div>
 {% endif %}
 
-<div class="container mb-2 largerFontSize">
+<div class="container mt-5 mb-5 largerFontSize">
 
   <div class="table-responsive-sm">
     <table class="table defaultFontSize mx-auto table-striped">
@@ -21,9 +21,15 @@
     </table>
   </div>
 
-  <h2>Cities in {{ country.name }}</h2>
-  {% for city in cities_in_country|dictsort:"accentcity" %}
-    {{ city.accentcity }},
+  {% if cities_in_country %}
+    <h2>Cities in {{ country.name }}</h2>
+  {% endif %}
+
+  
+  {% for city in cities_in_country %}
+    {{ city.accentcity }}{% if not forloop.last %}, {% endif %}{% if forloop.last %}.{% endif %}
+  {% empty %}
+    <p>No cities in the dataset</p>
   {% endfor %}
 </div>
 

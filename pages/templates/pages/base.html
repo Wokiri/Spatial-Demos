@@ -1,11 +1,20 @@
 {% load static %}
+{% load humanize %} 
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}{{ pageName }} | {% endblock %}LaerdzDev</title>
+        
+        {% block title %}
+            {% if pageName %}
+                <title>{{ pageName }} | LaerdzDev</title>
+            {% else %}
+                <title>LaerdzDev GIS</title>
+            {% endif %}
+        {% endblock %}
+
         <link rel="stylesheet" type="text/css" href="{% static 'pages/css/bootstrapStyling.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'pages/css/mapStyling.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'pages/css/personalsite.css' %}">

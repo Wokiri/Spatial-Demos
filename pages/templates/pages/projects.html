@@ -1,9 +1,10 @@
 {% extends 'pages/base.html' %}
+{% load humanize %} 
 
 {% block content %}
 
 <div class="container mt-4 mb-4">
-    <h2 class="text-center">List of {{ projects|length }} project{{ projects|pluralize }} done:</h2>
+    <h2 class="text-center">List of {{ projects|length|apnumber }} project{{ projects|pluralize }} done:</h2>
     <ul class="nav nav-pills list-group mb-4 largerFontSize">
         {% for project in projects %}
         <li class="nav-item list-group-item">

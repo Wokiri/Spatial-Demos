@@ -14,6 +14,7 @@ from contents.models import (
     Service,
     Project
     )
+
 from maps.models import (
     CountriesZones,
     WorldCities
@@ -136,3 +137,13 @@ def country_detail(request, country_id):
     }
 
     return render(request, 'pages/maps/country_detail.html', context)
+
+
+def myTestsView(request):
+    from .forms import LocationForm, UserPolygonForm
+
+
+    context = {
+        'map_form': UserPolygonForm()
+    }
+    return render(request, 'pages/mytests.html', context)

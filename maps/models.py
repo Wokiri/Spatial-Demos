@@ -18,4 +18,20 @@ class WorldCities(models.Model):
     accentcity = models.CharField(max_length=254)
     geom = models.PointField(srid=4326)
 
+    class Meta:
+        ordering = ('accentcity',)
+
     def __str__(self): return self.accentcity
+
+
+class UserPoint(models.Model):
+    name = models.CharField(max_length=25)
+    location = models.PointField(srid=4326)
+
+    def __str__(self): return self.name
+
+class UserPolygon(models.Model):
+    name = models.CharField(max_length=25)
+    location = models.PolygonField(srid=4326)
+
+    def __str__(self): return self.name
