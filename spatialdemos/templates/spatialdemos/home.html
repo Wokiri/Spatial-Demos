@@ -1,0 +1,28 @@
+{% extends 'spatialdemos/base.html' %} {% block content %}
+
+<div class="container mt-3 mb-3">
+  <h1 class="text-info font-weight-bold text-center tertiaryFont">LaerdzGIS Demos</h1>
+</div>
+
+<div class="container">
+  <h5 class="display-5">LaerdzGIS Demos</h5>
+</div>
+
+<div class="container">
+  <div class="list-group mb-2">
+    <a class="list-group-item list-group-item-action" href="{% url 'spatialdemos:storedemo_page' %}">Stores Map</a>
+  </div>
+  <div class="list-group mb-2">
+    <a class="list-group-item list-group-item-action" href="{% url 'spatialdemos:storedemo_page' %}">Government Ministry</a>
+  </div>
+  <div class="list-group mb-2">
+    <a class="list-group-item list-group-item-action" href="{% url 'spatialdemos:storedemo_page' %}">Community Service NGO</a>
+  </div>
+  <div class="list-group mb-2">
+    <a class="list-group-item list-group-item-action" href="{% url 'spatialdemos:storedemo_page' %}">Geography Facts</a>
+  </div>
+</div>
+
+
+
+{% endblock %}

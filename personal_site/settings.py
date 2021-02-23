@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'contents.apps.ContentsConfig',
     'maps.apps.MapsConfig',
+    'spatialdemos.apps.SpatialdemosConfig',
 ]
 
 MIDDLEWARE = [

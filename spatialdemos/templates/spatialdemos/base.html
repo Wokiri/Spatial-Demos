@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block title %}
+            {% if pageName %}
+                <title>{{ pageName }} | LaerdzDev</title>
+            {% else %}
+                <title>LaerdzDev GIS</title>
+            {% endif %}
+        {% endblock %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'spatialdemos/css/bootstrapStyling.css' %}">
+
+        {% block headmedia %}{% endblock %}
+        
+    </head>
+
+    <body>
+
+        <div class="h-75 primFont">
+            <div class="container">
+                {% include 'spatialdemos/mainNavigation.html' %}
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+
+
+
+        <script src="{% static 'spatialdemos/js/bootstrapStyling.js' %}"></script>
+
+    </body>
+
+</html>

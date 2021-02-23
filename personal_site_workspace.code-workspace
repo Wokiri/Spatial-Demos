@@ -20,6 +20,7 @@
 		"javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
 		"javascript.format.placeOpenBraceOnNewLineForFunctions": true,
 		"html.format.preserveNewLines": false,
-		"html.format.enable": false
+		"html.format.enable": false,
+		"python.pythonPath": "C:\\Python38\\python.exe"
 	}
 }

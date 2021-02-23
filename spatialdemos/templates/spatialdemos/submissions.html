@@ -1,0 +1,39 @@
+{% extends 'spatialdemos/base.html' %}
+
+{% block headmedia %}
+    {{ customer_map_form.media }}
+{% endblock %}
+
+{% block content %}
+
+
+{% if messages %}
+    <div class="container text-center">
+        <div class="container col-sm-8 mb-5">
+            {% for message in messages %}
+            <h3 {% if message.tags %} class="text-{{ message.tags }}" {% endif %}>{{ message }}</h3>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+
+
+<div class="container">
+    <form action="" method="post">
+        <div class="text-info">
+            <h3 class="font-weight-bold text-center">Add Customer Form</h3>
+        </div>
+        {% csrf_token %}
+        {{ customer_map_form.management_form }}
+            {% for form in customer_map_form %}
+                <p>{{ form }}</p>
+            {% endfor %}
+        <div class="col-12 my-3">
+            <button type="submit" class="btn btn-outline-success">Add Customer</button>
+        </div>
+    </form>
+</div>
+
+    
+{% endblock %}

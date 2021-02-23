@@ -1,0 +1,55 @@
+{% extends 'spatialdemos/base.html' %} {% block content %}
+
+<div class="container rounded bg-light">
+  <div class="my-4 p-4">
+    {% if retail_store %}
+      <h4 class="display-5 text-success">{{ retail_store.name }}</h4>
+      <p class="lead">{{ retail_store.description }}</p>
+    {% endif %}
+  </div>
+
+  <div class="row border">
+    <div class="col-sm-6 p-sm-5 my-3">
+      <h5 class="text-center">Our Customers</h5>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Fav food</th>
+            </tr>
+          </thead>
+      
+          <tbody>
+            {% for customer in store_customers %}
+            <tr>
+              <td>{{ customer.name }}</td>
+              <td>{{ customer.fav_food }}</td>
+            </tr>
+            {% empty %}
+            <p>List yet to be updated!</p>
+            {% endfor %}
+          </tbody>
+        </table>
+        
+    </div>
+
+    <div class="col-sm p-sm-5">
+      <div class="my-3">
+        <form action="" method="get">
+        <h5><small></small>Distance from the strore (KM)</small></h5>
+        {{ dist_input.as_p }}
+        <input type="submit" value="Get Customers">
+      </form>
+      </div>
+      <p>Customers residing at least {{ querry_value }} KM from the store:</p>
+        {% for customer in dist_customers %}
+          <p>{{ forloop.counter }}. {{ customer }}</p>
+        {% empty %}
+          <p>No customer meets the creteria</p>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
