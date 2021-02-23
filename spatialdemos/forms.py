@@ -3,6 +3,8 @@ from .models import (
     Customer,
     )
 
+from django.core.validators import MinValueValidator
+
 class CustomerForm(forms.ModelForm):
 
     name = forms.CharField(
@@ -29,4 +31,4 @@ class CustomerForm(forms.ModelForm):
 
 
 class DistanceValue(forms.Form):
-    distance_value = forms.DecimalField(max_digits=10, decimal_places=2)
+    distance_value = forms.DecimalField(max_digits=10, decimal_places=2, validators=[MinValueValidator(0)])

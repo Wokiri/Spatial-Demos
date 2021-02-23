@@ -8,7 +8,7 @@
     {% endif %}
   </div>
 
-  <div class="row border">
+  <div class="row border border-success">
     <div class="col-sm-6 p-sm-5 my-3">
       <h5 class="text-center">Our Customers</h5>
         <table class="table table-striped table-hover">
@@ -41,9 +41,11 @@
         <input type="submit" value="Get Customers">
       </form>
       </div>
-      <p>Customers residing at least {{ querry_value }} KM from the store:</p>
+        {% if dist_customers %}
+          <p>Customers residing further than {{ querry_value }} KM radius from the store:</p>
+        {% endif %}
         {% for customer in dist_customers %}
-          <p>{{ forloop.counter }}. {{ customer }}</p>
+        <p>{{ forloop.counter }}. {{ customer }}</p>
         {% empty %}
           <p>No customer meets the creteria</p>
         {% endfor %}

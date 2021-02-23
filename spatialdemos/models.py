@@ -26,3 +26,22 @@ class RetailStore(models.Model):
     location = models.PointField(srid=4326)
 
     def __str__(self): return self.name
+
+
+
+class NairobiConstituency(models.Model):
+    name = models.CharField(max_length=50)
+    geom = models.MultiPolygonField(srid=4326)
+
+    class Meta:
+        verbose_name_plural = "constituencies"
+
+    def __str__(self): return self.name
+
+
+
+class StoreCustomer(models.Model):
+    name = models.CharField(max_length=50)
+    geom = models.MultiPointField(srid=4326)
+
+    def __str__(self): return self.name
