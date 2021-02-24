@@ -1,5 +1,5 @@
 const path = require("path");
-const webpack = require('webpack')
+const webpack = require("webpack");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -9,9 +9,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     bootstrapStyling: "./src/js/bootstrapStyling.js",
-    appStyling: "./src/js/appStyling.js",
-    personalsite: "./src/js/personalsite.js",
-    worldtimeMap: "./src/js/worldtimeMap.js",
+    mapStyling: "./src/js/mapStyling.js",
+    locationMap: "./src/js/locationMap.js",
   },
   output: {
     publicPath: "",
@@ -21,8 +20,8 @@ module.exports = {
   },
   devServer: {
     port: 2040,
-    clientLogLevel: 'none',
-    stats: 'errors-only'
+    clientLogLevel: "none",
+    stats: "errors-only",
   },
   optimization: {
     minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
@@ -95,11 +94,11 @@ module.exports = {
   },
 
   plugins: [
-	new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      'process.env.NODE_DEBUG': JSON.stringify(process.env.NODE_DEBUG),
-      'process.type': JSON.stringify(process.type),
-      'process.version': JSON.stringify(process.version)
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+      "process.env.NODE_DEBUG": JSON.stringify(process.env.NODE_DEBUG),
+      "process.type": JSON.stringify(process.type),
+      "process.version": JSON.stringify(process.version),
     }),
     new CleanWebpackPlugin(),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
@@ -114,6 +113,5 @@ module.exports = {
         removeEmptyAttributes: true,
       },
     }),
-    
   ],
 };

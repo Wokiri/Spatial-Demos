@@ -1,16 +1,22 @@
 {% extends 'spatialdemos/base.html' %} {% block content %}
 
 <div class="container bg-light rounded-lg">
-    <div class="my-1 p-4">
+    <div class="my-1 px-4 py-2">
       <h4 class="display-5 text-success">Generous Retail Store</h4>
-      <p class="lead">Yes to Progress!</p>
+      <p class="my-1 lead">Yes to Progress!</p>
     </div>
-    <div class="p-4">
-      <h4 class="display-5 text-success">Customers Location</h4>
-      <div class="border border-success">
-
-      </div>
+    <div class="px-4 py-1">
+      <h5 class="display-5 text-success">Customers Location</h5>
+    <div class="mb-1">
+      <div class="w-100 mx-auto" id="locationdemo_map"></div>
+      <div id="mapcontent" class="container bg-light" style="min-height: 120px;"></div>
+    </div>
     </div>
 </div>
+
+<script>
+  const nairobiConstituenciesjson = "{{ nairobi_constituencies_json|escapejs }}";
+  const storeCustomersjson = "{{ all_customers_json|escapejs }}";
+</script>
 
 {% endblock %}

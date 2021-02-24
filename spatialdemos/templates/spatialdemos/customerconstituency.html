@@ -1,0 +1,36 @@
+{% extends 'spatialdemos/base.html' %}
+{% load humanize %} 
+
+{% block content %}
+
+<div class="container my-2">
+    <div class="my-1 px-1 py-2">
+        <h4 class="display-5 text-success">Generous Retail Store</h4>
+        <p class="my-0 lead">Yes to Progress!</p>
+    </div>
+</div>
+
+<div class="container my-4">
+    {% if num_customers_in_constituency > 0 %}
+        <h5 class="display-5">
+        List of {{ num_customers_in_constituency|apnumber }} customer{{ num_customers_in_constituency|pluralize }} within {{ constituency|capfirst }} Constituency:
+        </h5>
+    {% endif %}
+</div>
+
+<div class="container px-3 my-4">
+    <ul class="list-group">
+        {% for customer in customers_in_constituency %}
+            <li class="list-group-item">{{ forloop.counter }}. {{ customer }}</li>
+        {% empty %}
+            <h5>There are no customers from this region yet!</h5>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="container">
+    <a href="{% url 'spatialdemos:customer_location_page' %}" class="btn btn-outline-dark" role="button">Back to Map View</a>
+</div>
+
+
+{% endblock %}

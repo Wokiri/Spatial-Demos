@@ -1,13 +1,19 @@
 from django.shortcuts import get_object_or_404, render
 from django.contrib import messages
+from django.core.serializers import serialize
 
 from django.contrib.gis.db.models.functions import Distance
+from django.contrib.gis.gdal import OGRGeometry
 
 
-from .models import RetailStore
-from .models import Customer
+from .models import (
+    Customer,
+    RetailStore,
+    NairobiConstituency,
+    StoreCustomer
+    )
 
-# wgs_utm = CoordTransform(SpatialReference('WGS84'), SpatialReference('NAD83'))
+all_customers = StoreCustomer.objects.all()
 
 
 def home_view(request):
@@ -77,9 +83,44 @@ def customer_distance_view(request):
 def customer_location_view(request):
 
     pageName = 'Customer Location'
+    nairobi_constituencies_json = serialize('geojson', NairobiConstituency.objects.all())
+    all_customers_json = serialize('geojson', all_customers)
 
     context = {
         'pageName': pageName,
+        'nairobi_constituencies_json': nairobi_constituencies_json,
+        'all_customers_json': all_customers_json
     }
 
     return render(request, 'spatialdemos/store_customerlocation.html', context)
+
+
+def customers_in_constituency_view(request, id):
+
+    constituency = get_object_or_404(NairobiConstituency, id=id)
+    customers_in_constituency = []
+    pageName = f'{constituency} Constituency'
+
+    constituency_ogr = OGRGeometry(constituency.geom.wkt)
+
+    for customer in all_customers:
+        customer_ogr = OGRGeometry(customer.geom.wkt)
+        if constituency_ogr.contains(customer_ogr):
+            customers_in_constituency.append(customer)
+    
+
+    context = {
+        'pageName': pageName,
+        'constituency': constituency,
+        'customers_in_constituency': customers_in_constituency,
+        'num_customers_in_constituency': len(customers_in_constituency),
+    }
+
+    return render(request, 'spatialdemos/customerconstituency.html', context)
+
+
+def governance_mapping_view(request):
+
+    context = {}
+
+    return render(request, 'spatialdemos/governancemapping.html', context)

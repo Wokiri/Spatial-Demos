@@ -44,4 +44,7 @@ class StoreCustomer(models.Model):
     name = models.CharField(max_length=50)
     geom = models.MultiPointField(srid=4326)
 
+    class Meta:
+        ordering = ["name"]
+
     def __str__(self): return self.name

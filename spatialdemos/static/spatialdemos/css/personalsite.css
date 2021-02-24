@@ -186,14 +186,6 @@
   font-size: larger;
 }
 
-.line {
-  border: solid #00aaff;
-  border-width: 0 3px 0 0;
-  display: inline-block;
-  padding: 0.8em 0;
-  margin: 4px;
-}
-
 * {
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
@@ -204,53 +196,4 @@
 
 html {
   font-family: "BarlowSemiCondensed-Regular";
-}
-
-body {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0;
-  border: 0;
-  overflow-x: hidden;
-  color: #004666;
-}
-
-body #mainNavigation a {
-  color: black;
-}
-
-body #form_inspirationDiv #formDiv {
-  background-color: white;
-  font-size: xx-large;
-}
-
-body .fromLeft {
-  opacity: 0;
-  -webkit-transform: translate(-12px, 0px);
-          transform: translate(-12px, 0px);
-  -webkit-transition: opacity 750ms ease-in-out, -webkit-transform 500ms ease-out;
-  transition: opacity 750ms ease-in-out, -webkit-transform 500ms ease-out;
-  transition: opacity 750ms ease-in-out, transform 500ms ease-out;
-  transition: opacity 750ms ease-in-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
-}
-
-body .fromRight {
-  opacity: 0;
-  -webkit-transform: translate(12px, 0px);
-          transform: translate(12px, 0px);
-  -webkit-transition: opacity 750ms ease-in-out, -webkit-transform 500ms ease-out;
-  transition: opacity 750ms ease-in-out, -webkit-transform 500ms ease-out;
-  transition: opacity 750ms ease-in-out, transform 500ms ease-out;
-  transition: opacity 750ms ease-in-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
-}
-
-body .normal {
-  opacity: 1;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-  -webkit-transition: opacity 750ms ease-in-out, -webkit-transform 500ms ease-out;
-  transition: opacity 750ms ease-in-out, -webkit-transform 500ms ease-out;
-  transition: opacity 750ms ease-in-out, transform 500ms ease-out;
-  transition: opacity 750ms ease-in-out, transform 500ms ease-out, -webkit-transform 500ms ease-out;
 }

@@ -42,12 +42,12 @@
       </form>
       </div>
         {% if dist_customers %}
-          <p>Customers residing further than {{ querry_value }} KM radius from the store:</p>
+          <p class="lead">Customers residing further than {{ querry_value }} KM radius from the store:</p>
         {% endif %}
         {% for customer in dist_customers %}
         <p>{{ forloop.counter }}. {{ customer }}</p>
         {% empty %}
-          <p>No customer meets the creteria</p>
+          <p class="lead text-info">No customer lives as far as {{ querry_value }} KM away!</p>
         {% endfor %}
     </div>
   </div>
