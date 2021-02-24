@@ -3,7 +3,9 @@ from django.contrib import messages
 from django.core.serializers import serialize
 
 from django.contrib.gis.db.models.functions import Distance
-from django.contrib.gis.gdal import OGRGeometry
+from django.contrib.gis.gdal import OGRGeometry, SpatialReference, CoordTransform
+from django.http import HttpResponse
+
 
 
 from .models import (
@@ -12,7 +14,6 @@ from .models import (
     NairobiConstituency,
     StoreCustomer,
     SampledIssue,
-    KenyaCounty,
     )
 
 all_customers = StoreCustomer.objects.all()
@@ -148,3 +149,27 @@ def issue_detail_view(request, id):
     }
 
     return render(request, 'spatialdemos/issue.html', context)
+
+
+def coordinate_conversion_view(request):
+    from .forms import OgrObjectForm
+    object_form = OgrObjectForm()
+    pageName = f'Coordinate Conversion'
+
+    if request.method=="POST":
+        object_form = OgrObjectForm(request.POST)
+        geom = OGRGeometry(request.POST.get('geom_text'))
+        ct = CoordTransform(
+            SpatialReference(request.POST.get('convert_from')),
+            SpatialReference(request.POST.get('convert_to'))
+            )
+        # interesting options
+        transformsOGR = geom.transform(ct, clone=True).json
+        return HttpResponse(transformsOGR)
+
+    context = {
+        'pageName': pageName,
+        'object_form': object_form
+    }
+
+    return render(request, 'spatialdemos/coordconversion.html', context)

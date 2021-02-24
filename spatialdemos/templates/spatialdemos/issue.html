@@ -7,15 +7,16 @@
 {% block content %}
 
 <div class="container my-5">
-    <h4 class="display-5 text-success text-center">{{ issue.id }}. {{ issue.issue }}</h4>
+    {% if counties %}
+        <h4 class="display-5 text-success text-center">
+            {{ counties_count|apnumber|capfirst }} counties with {{ issue.issue|lower }}
+        </h4>
+    {% endif %}
     <div class="row my-4">
         <div class="col-sm-8" style="min-height: 500px;">
             <div id="issuesmap" class="w-100 mx-auto"></div>
         </div>
         <div class="col-sm-4 bg-light p-sm-4">
-            {% if counties %}
-                <h5 class="lead mb-sm-4">List of {{ counties_count|apnumber }} counties:</h5>
-            {% endif %}
             {% for county in counties %}
                 <p>{{ forloop.counter }}. {{ county }}</p>
             {% empty %}
@@ -23,6 +24,12 @@
             {% endfor %}
         </div>
     </div>
+</div>
+
+<div class="container mb-5">
+    <a href="{% url 'spatialdemos:governance_mapping_page' %}" class="btn btn-outline-dark" role="button">
+        Back to Issues List
+    </a>
 </div>
 
 <script>

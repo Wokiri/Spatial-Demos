@@ -8,6 +8,7 @@ from .views import (
     customers_in_constituency_view,
     issues_list_view,
     issue_detail_view,
+    coordinate_conversion_view,
     )
 
 app_name = 'spatialdemos'
@@ -19,7 +20,8 @@ urlpatterns = [
     path('customerlocation/', customer_location_view, name='customer_location_page'),
     path('constituency/<int:id>', customers_in_constituency_view, name='customers_in_constituency_page'),
     path('governance/', issues_list_view, name='governance_mapping_page'),
-    path('issue/<int:id>', issue_detail_view, name='issue_page'),
+    path('issue/<int:id>/', issue_detail_view, name='issue_page'),
+    path('conversion/', coordinate_conversion_view, name='coordinate_conversion_page'),
 
 
 ]
