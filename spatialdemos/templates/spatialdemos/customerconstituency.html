@@ -23,7 +23,7 @@
         {% for customer in customers_in_constituency %}
             <li class="list-group-item">{{ forloop.counter }}. {{ customer }}</li>
         {% empty %}
-            <h5>There are no customers from this region yet!</h5>
+            <h5 class="text-danger">No customer comes from {{ constituency|capfirst }} Constituency!</h5>
         {% endfor %}
     </ul>
 </div>

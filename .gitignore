@@ -12,8 +12,10 @@ db.sqlite3-journal
 *node_modules/
 jspm_packages/
 
-
-*/prod
+*/graphics/
+*/prod/
+*/nairobiconstituenciesmap/
+*/issuesmap/
 
 */src/fontsAssets/
 */src/fonts/

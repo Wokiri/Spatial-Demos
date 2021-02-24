@@ -1,0 +1,22 @@
+{% extends 'spatialdemos/base.html' %} {% load humanize %} {% block content %}
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-sm-8 mx-auto">
+      {% if issues %}
+      <h4 class="display-5 text-center py-3 text-info">Issues Sampled</h4>
+      {% endif %}
+      <div class="list-group mb-2">
+        {% for issue in issues %}
+        <a class="list-group-item list-group-item-action lead" href="{% url 'spatialdemos:issue_page' issue.id %}">
+          {{ forloop.counter }}. {{ issue.issue }}
+        </a>
+        {% empty %}
+        <p class="lead text-info">No issues identified!</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

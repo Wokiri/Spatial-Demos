@@ -10,7 +10,7 @@ module.exports = {
   entry: {
     bootstrapStyling: "./src/js/bootstrapStyling.js",
     mapStyling: "./src/js/mapStyling.js",
-    locationMap: "./src/js/locationMap.js",
+    issuesMap: "./src/js/issuesMap.js",
   },
   output: {
     publicPath: "",

@@ -10,7 +10,9 @@ from .models import (
     Customer,
     RetailStore,
     NairobiConstituency,
-    StoreCustomer
+    StoreCustomer,
+    SampledIssue,
+    KenyaCounty,
     )
 
 all_customers = StoreCustomer.objects.all()
@@ -119,8 +121,30 @@ def customers_in_constituency_view(request, id):
     return render(request, 'spatialdemos/customerconstituency.html', context)
 
 
-def governance_mapping_view(request):
+def issues_list_view(request):
 
-    context = {}
+    pageName = 'Issues'
 
-    return render(request, 'spatialdemos/governancemapping.html', context)
+    context = {
+        'pageName': pageName,
+        'issues': SampledIssue.objects.all(),
+    }
+
+    return render(request, 'spatialdemos/issues.html', context)
+
+
+def issue_detail_view(request, id):
+
+    issue = get_object_or_404(SampledIssue, id=id)
+    counties = issue.counties.all()
+    pageName = f'{id} {issue.issue}'
+
+    context = {
+        'pageName': pageName,
+        'issue': issue,
+        'counties': counties,
+        'counties_count': counties.count(),
+        'counties_json': serialize('geojson', counties),
+    }
+
+    return render(request, 'spatialdemos/issue.html', context)

@@ -1,4 +1,12 @@
-{% extends 'spatialdemos/base.html' %} {% block content %}
+{% extends 'spatialdemos/base.html' %}
+
+{% block headmedia %}{% endblock %}
+
+{% load humanize %}
+{% load static %}
+
+
+{% block content %}
 
 <div class="container bg-light rounded-lg">
     <div class="my-1 px-4 py-2">
@@ -14,9 +22,14 @@
     </div>
 </div>
 
+
 <script>
   const nairobiConstituenciesjson = "{{ nairobi_constituencies_json|escapejs }}";
   const storeCustomersjson = "{{ all_customers_json|escapejs }}";
 </script>
+
+<script src="{% static 'spatialdemos/js/locationMap.js' %}"></script>
+
+
 
 {% endblock %}

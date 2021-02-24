@@ -48,3 +48,21 @@ class StoreCustomer(models.Model):
         ordering = ["name"]
 
     def __str__(self): return self.name
+
+
+class KenyaCounty(models.Model):
+    name = models.CharField(max_length=25)
+    geom = models.MultiPolygonField(srid=4326)
+
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self): return self.name
+
+
+class SampledIssue(models.Model):
+    issue = models.CharField(max_length=250)
+    counties = models.ManyToManyField(KenyaCounty, verbose_name="list of counties", related_name='counties')
+
+    def __str__(self): return self.issue
+

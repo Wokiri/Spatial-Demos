@@ -45,7 +45,7 @@
           <p class="lead">Customers residing further than {{ querry_value }} KM radius from the store:</p>
         {% endif %}
         {% for customer in dist_customers %}
-        <p>{{ forloop.counter }}. {{ customer }}</p>
+          <p>{{ forloop.counter }}. {{ customer }}</p>
         {% empty %}
           <p class="lead text-info">No customer lives as far as {{ querry_value }} KM away!</p>
         {% endfor %}
