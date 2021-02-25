@@ -27,12 +27,23 @@ class DistanceValue(forms.Form):
     distance_value = forms.DecimalField(max_digits=10, decimal_places=2, validators=[MinValueValidator(0)])
 
 class OgrObjectForm(forms.Form):
-
     geom_text = forms.CharField(label='Geom Text Object:', initial = '{"type":"Point","coordinates":[-87.65018,41.85039]}',
         widget=forms.Textarea(
             attrs={'cols': 125,
             'rows': 5,}
         ))
-    convert_from = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'e.g EPSG value or WKT','cols': 125, 'rows': 2}))
+    convert_from = forms.CharField(initial = 4326, widget=forms.Textarea(
+        attrs={'placeholder': 'e.g EPSG value or WKT','cols': 125, 'rows': 2}
+        ))
     convert_to = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'e.g EPSG value or WKT','cols': 125, 'rows': 2}))
+    # TYPE = [
+    #     ('geos','geos'),
+    #     ('gml','gml'),
+    #     ('hex','hex'),
+    #     ('json','json'),
+    #     ('kml','kml'),
+    #     ('wkb','wkb'),
+    #     ('ewkt','ewkt'),
+    #     ]
+    # output_format = forms.CharField(max_length=10, widget=forms.Select(choices=TYPE),)
 

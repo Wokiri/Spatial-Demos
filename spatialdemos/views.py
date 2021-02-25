@@ -158,14 +158,30 @@ def coordinate_conversion_view(request):
 
     if request.method=="POST":
         object_form = OgrObjectForm(request.POST)
-        geom = OGRGeometry(request.POST.get('geom_text'))
-        ct = CoordTransform(
-            SpatialReference(request.POST.get('convert_from')),
-            SpatialReference(request.POST.get('convert_to'))
-            )
-        # interesting options
-        transformsOGR = geom.transform(ct, clone=True).json
-        return HttpResponse(transformsOGR)
+        
+        try:
+            inputSRS = SpatialReference(request.POST.get('convert_from'))
+        except:
+            raise TypeError('Invalid SRS type "%s"' % request.POST.get('convert_from'))
+        
+        try:
+            outputSRS = SpatialReference(request.POST.get('convert_to'))
+        except:
+            raise TypeError('Invalid SRS type "%s"' % request.POST.get('convert_to'))
+
+        ct = CoordTransform(inputSRS, outputSRS)
+        
+        from django.contrib.gis.gdal.error import GDALException
+
+        try:
+            inputgeom = OGRGeometry(request.POST.get('geom_text'), srs=inputSRS)
+        except:
+            raise GDALException('Invalid OGR String Type "%s"' % request.POST.get('geom_text'))
+        
+        outputgeom = inputgeom.transform(ct, clone=True)
+
+        # output_format = request.POST.get('output_format')
+        return HttpResponse(outputgeom.json)
 
     context = {
         'pageName': pageName,
